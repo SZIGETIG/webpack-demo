@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --devtool source-map --hot --inline"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +13,10 @@
     "webpack": "^4.41.5"
   },
   "dependencies": {
-    "webpack-cli": "^3.3.10"
+    "css-loader": "^3.4.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "style-loader": "^1.1.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   }
 }
