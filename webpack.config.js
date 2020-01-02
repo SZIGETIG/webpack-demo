@@ -4,12 +4,18 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './js/main.js',
+  context: path.resolve(__dirname, ''),
+  entry: {
+    'main': './js/main.js',
+    'main2': './js/main2.js'
+  },
 
   output: {
     // 将所有依赖的模块合并输出到一个叫bundle.js文件内
-    filename: 'bundle.js',
+    // filename: '[name]_[hash:8].js',
+    filename: '[name].js',
     // 将输出的文件都放在dist目录下
+    chunkFilename: '[name].min.js',
     path: path.resolve(__dirname, './dist')
   },
   module: {
