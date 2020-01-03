@@ -2,4 +2,4 @@ function a() {
     console.log('a.js');
   }
 
-  module.exports = a;
+module.exports = a;
